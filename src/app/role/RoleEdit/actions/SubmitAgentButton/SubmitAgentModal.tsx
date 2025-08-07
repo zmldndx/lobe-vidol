@@ -166,7 +166,7 @@ const SubmitAgentModal = memo<ModalProps>(({ open, onCancel }) => {
               const randomId = Math.random().toString(36).slice(7);
               setAgentId(kebabCase(randomId));
             }}
-          ></Button>
+           />
         </Space.Compact>
       </Flexbox>
     </Modal>

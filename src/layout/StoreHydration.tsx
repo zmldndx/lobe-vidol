@@ -13,6 +13,7 @@ import { vidolStorage } from '@/utils/storage';
 const MIGRATION_KEY = 'MIGRATE_TO_INDEXED_DB';
 
 export const migrateLocalStorageToIndexedDB = async (storageKey: string) => {
+  if (typeof window === 'undefined') return;
   const localStorageData = localStorage.getItem(storageKey);
   if (localStorageData) {
     await vidolStorage.setItem(storageKey, localStorageData);
@@ -21,6 +22,7 @@ export const migrateLocalStorageToIndexedDB = async (storageKey: string) => {
 };
 
 const migrate = async () => {
+  if (typeof window === 'undefined') return;
   // localstorage 迁移到 indexeddb 后，删除迁移标识
   if (localStorage.getItem(MIGRATION_KEY)) return;
   await migrateLocalStorageToIndexedDB(AGENT_STORAGE_KEY);

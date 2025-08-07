@@ -17,7 +17,7 @@ const Background = () => {
         zIndex: -1,
         transition: 'background-image 0.5s ease-in-out',
       }}
-    ></div>
+     />
   ) : null;
 };
 

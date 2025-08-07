@@ -32,7 +32,7 @@ const DanceIdInput: React.FC<DanceIdInputProps> = ({ onChange, value, className,
             onChange(kebabCase(randomId));
           }
         }}
-      ></Button>
+       />
     </Space.Compact>
   );
 };

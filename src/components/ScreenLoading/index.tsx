@@ -25,7 +25,7 @@ const ScreenLoading = (props: ScreenLoadingProps) => {
     >
       <Center flex={1} gap={12} width={'100%'}>
         <div id="loading-screen" ref={loadingScreenRef}>
-          <div id="loader"></div>
+          <div id="loader" />
         </div>
         <Center gap={8} horizontal>
           {title}

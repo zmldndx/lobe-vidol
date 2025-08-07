@@ -39,7 +39,11 @@ const VirtualizedList = memo<VirtualizedListProps>(({ mobile, className, style, 
   }, [id]);
 
   // overscan should be 3 times the height of the window
-  const overscan = typeof window !== 'undefined' ? window.innerHeight * 2 : 0;
+  const [overscan, setOverscan] = useState(0);
+  
+  useEffect(() => {
+    setOverscan(window.innerHeight * 2);
+  }, []);
 
   // @ts-ignore
   return (

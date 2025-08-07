@@ -11,7 +11,7 @@ import { useGlobalStore } from '@/store/global';
 
 import ChatMode from './ChatMode';
 
-const CameraMode = dynamic(() => import('./CameraMode'), {
+const CameraMode = dynamic(() => import('./CameraMode/index'), {
   ssr: false,
   loading: () => (
     <Center style={{ height: '100%', width: '100%' }}>

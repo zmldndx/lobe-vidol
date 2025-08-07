@@ -20,5 +20,9 @@ export const POST = async (req: Request) => {
   const response = await tts.create(payload);
   const mp3Buffer = Buffer.from(await response.arrayBuffer());
 
-  return new Response(mp3Buffer);
+  return new Response(mp3Buffer as any, {
+    headers: {
+      'Content-Type': 'audio/mpeg',
+    },
+  });
 };

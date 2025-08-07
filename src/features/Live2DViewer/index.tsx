@@ -32,7 +32,7 @@ const Live2d = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} id={'live2d-canvas'}></canvas>;
+  return <canvas ref={canvasRef} id={'live2d-canvas'} />;
 };
 
 export default memo(Live2d);

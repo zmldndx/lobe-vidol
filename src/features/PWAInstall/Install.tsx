@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { memo, useEffect, useLayoutEffect } from 'react';
+import { memo, useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { BRANDING_NAME } from '@/constants/branding';
@@ -29,9 +29,11 @@ const PWAInstall = memo(() => {
     sessionStorage.setItem('pwa-hide-install', 'true');
   }, []);
 
-  const pwaInstall =
-    // eslint-disable-next-line unicorn/prefer-query-selector
-    typeof window === 'undefined' ? undefined : document.getElementById(PWA_INSTALL_ID);
+  const [pwaInstall, setPwaInstall] = useState<HTMLElement | null>(null);
+  
+  useEffect(() => {
+    setPwaInstall(document.getElementById(PWA_INSTALL_ID));
+  }, []);
 
   // add an event listener to control the user close installer action
   useEffect(() => {

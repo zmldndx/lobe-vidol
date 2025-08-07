@@ -23,11 +23,11 @@ const Background = () => {
           zIndex: -1,
           transition: 'background-image 0.5s ease-in-out',
         }}
-      ></div>
+       />
     );
   }
 
-  return backgroundEffect === 'glow' ? <div className={styles.glow}></div> : null;
+  return backgroundEffect === 'glow' ? <div className={styles.glow} /> : null;
 };
 
 export default Background;

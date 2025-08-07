@@ -6,7 +6,7 @@ const Background = () => {
   const { styles } = useStyles();
   const backgroundEffect = useSettingStore((s) => s.config.backgroundEffect);
 
-  return backgroundEffect === 'glow' ? <div className={styles.glow}></div> : null;
+  return backgroundEffect === 'glow' ? <div className={styles.glow} /> : null;
 };
 
 export default Background;

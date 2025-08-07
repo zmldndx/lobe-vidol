@@ -117,7 +117,7 @@ const ListItem = forwardRef<HTMLDivElement, ListItemProps & HTMLAttributes<any>>
       >
         {pin && (
           <div className={styles.pin}>
-            <div className={styles.triangle}></div>
+            <div className={styles.triangle} />
           </div>
         )}
         {avatar}

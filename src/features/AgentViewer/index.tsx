@@ -290,7 +290,7 @@ function AgentViewer(props: Props) {
           }
         />
       ) : null}
-      <canvas ref={canvasRef} className={styles.canvas} id={'vrm-canvas'}></canvas>
+      <canvas ref={canvasRef} className={styles.canvas} id={'vrm-canvas'} />
       <Background />
     </div>
   );
